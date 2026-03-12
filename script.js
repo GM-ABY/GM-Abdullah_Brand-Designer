@@ -238,18 +238,17 @@ contactForm.addEventListener('submit', (e) => {
     }, 3000);
 });
 
-function updateTime() {
+<div
+                        class="bg-charcoal p-6 rounded-xl border border-electricPurple/30 shadow-[0_0_15px_rgba(138,43,226,0.1)] inline-block">
+                        <h4 class="text-sm text-darkGray font-medium mb-2 flex items-center gap-2">
+                            <i class="fa-regular fa-clock text-electricPurple"></i> My Local Time (BD)
+                        </h4>
+                        <div class="text-3xl font-mono text-white tracking-wider" id="local-time">
+                            --:--:-- --
+                        </div>
+                    </div>
+                </div>
 
-    const now = new Date();
-    const options = { 
-        timeZone: 'Asia/Dhaka', // Fixed to Bangladesh Time
-        hour: '2-digit', 
-        minute: '2-digit', 
-        hour12: true 
-    };
-    const formatter = new Intl.DateTimeFormat('en-US', options);
-    const bdTime = formatter.format(new Date());
-    
     // Status message based on time (Optional but cool!)
     let status = (new Date().getHours() >= 23 || new Date().getHours() < 7) ? " (Sleeping)" : " (Available)";
     
@@ -274,6 +273,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 console.log('🚀 Portfolio loaded successfully!');
+
 
 
 
