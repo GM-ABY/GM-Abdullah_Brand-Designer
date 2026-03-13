@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Local Time (Bangladesh) Functionality
+    const timeDisplay = document.getElementById('local-time');
+    
+    function updateTime() {
+        if(!timeDisplay) return;
+        const options = { 
+            timeZone: 'Asia/Dhaka',
+            hour: '2-digit', 
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        };
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        timeDisplay.textContent = formatter.format(new Date());
+    }
+    
+    updateTime();
+    setInterval(updateTime, 1000);
+
 // ===== GSAP Registration =====
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -273,6 +293,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 console.log('🚀 Portfolio loaded successfully!');
+
 
 
 
