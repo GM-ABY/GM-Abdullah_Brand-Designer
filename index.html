@@ -1,660 +1,753 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="canonical" href="https://gm-aby.github.io/GM.Abdullah_Brand-Designer/" />
-    <meta
-      name="description"
-      content="Creative Brand Designer & Junior Developer Portfolio - Building exceptional digital experiences"
-    />
-    
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://gm-aby.github.io/GM.Abdullah_Brand-Designer/" />
+    <meta name="description"
+        content="Creative Brand Designer & Junior Developer Portfolio - Building exceptional digital experiences">
     <title>GM Abdullah | Brand Designer & Junior Web Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet" />
+
+    <!-- Tailwind CSS (from Site 2) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#050505',
+                        charcoal: '#121212',
+                        lighterCharcoal: '#1E1E1E',
+                        electricPurple: '#8a2be2',
+                        electricPurpleHover: '#9b40ee',
+                        lightGray: '#e5e7eb',
+                        darkGray: '#9ca3af'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicons -->
     <link rel="icon" type="image/png" href="img/Edit.icon-image.resized.png">
     <link rel="icon" href="img/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    
 
+    <!-- Meta Tags -->
     <meta property="og:site_name" content="GM Abdullah | Portfolio">
     <meta property="og:title" content="GM Abdullah | Brand Designer & Junior Web Developer">
-<meta property="og:description" content="Portfolio of GM Abdullah — Brand designer and junior web developer specializing in branding, logo design, and modern web experiences.">
-<meta property="og:url" content="https://gm-aby.github.io/GM.Abdullah_Brand-Designer/">
-<meta property="og:type" content="website">
+    <meta property="og:description" content="Portfolio of GM Abdullah — Brand designer and junior web developer specializing in branding, logo design, and modern web experiences.">
+    <meta property="og:url" content="https://gm-aby.github.io/GM.Abdullah_Brand-Designer/">
+    <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
     <meta property="og:image" content="https://gm-aby.github.io/GM.Abdullah_Brand-Designer/img/Black and Grey Modern Professional Profile LinkedIn Profile Picture.png">
+    
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "GM Abdullah",
-  "url": "https://gm-aby.github.io/GM.Abdullah_Brand-Designer/",
-  "jobTitle": "Graphic Designer & Junior Web Developer"
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "GM Abdullah",
+      "url": "https://gm-aby.github.io/GM.Abdullah_Brand-Designer/",
+      "jobTitle": "Graphic Designer & Junior Web Developer"
+    }
+    </script>
 
-  </head>
-  <body>
+    <!-- Custom CSS (from Site 1 setup) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-deepBlack text-lightGray font-sans antialiased selection:bg-electricPurple selection:text-white">
+
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursor-follower"></div>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <!-- ✏️ EDIT HERE: Change logo initials -->
-        <a href="#hero" class="logo">GM</a>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-btn" id="mobile-menu-btn">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+    <nav id="navbar" class="fixed w-full z-50 bg-deepBlack/80 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 md:h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-2xl font-bold tracking-tighter text-white">
+                        G.M. <span class="gradient-text">Abdullah</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-electricPurple focus:outline-none transition-colors">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-electricPurple transition-colors px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#skills" class="hover:text-electricPurple transition-colors px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#projects" class="hover:text-electricPurple transition-colors px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="#experience" class="hover:text-electricPurple transition-colors px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#contact" class="bg-electricPurple hover:bg-electricPurpleHover text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 ml-4">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-deepBlack/95 backdrop-blur-md border-b border-charcoal py-4 flex flex-col items-center gap-4 shadow-xl">
+                <a href="#about" class="mobile-link text-white hover:text-electricPurple transition-colors px-3 py-2 font-medium w-full text-center">About</a>
+                <a href="#skills" class="mobile-link text-white hover:text-electricPurple transition-colors px-3 py-2 font-medium w-full text-center">Skills</a>
+                <a href="#projects" class="mobile-link text-white hover:text-electricPurple transition-colors px-3 py-2 font-medium w-full text-center">Portfolio</a>
+                <a href="#experience" class="mobile-link text-white hover:text-electricPurple transition-colors px-3 py-2 font-medium w-full text-center">Experience</a>
+                <a href="#contact" class="mobile-link bg-electricPurple hover:bg-electricPurpleHover text-white px-6 py-3 mt-2 rounded-full font-bold transition-all shadow-lg w-10/12 text-center">Contact Me</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- ============================================
-         🎯 HERO SECTION
-         ✏️ EDIT: Your photo, name, title, and intro
-    ============================================= -->
-    <section class="hero" id="hero">
-      <div class="hero-bg">
-      <div class="hero-shape shape-1"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-24 pb-12 relative overflow-hidden">
+        <!-- Site 1 Shapes -->
+        <div class="hero-shape shape-1"></div>
         <div class="hero-shape shape-2"></div>
         <div class="hero-shape shape-3"></div>
-      </div>
-      <div class="hero-container">
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <!-- ✏️ EDIT HERE: Replace with YOUR photo URL -->
-            <img
-              src="img/Black and Grey Modern Professional Profile LinkedIn Profile Picture.png"
-              alt="G.M. Abdullah"
-              id="profile-img"
-            />
-          </div>
-        </div>
-        <div class="hero-content">
-          <span class="hero-greeting">Hello, I'm</span>
-          <!-- ✏️ EDIT HERE: Your name -->
-          <h1 class="hero-title">G.M. Abdullah</h1>
-          <!-- ✏️ EDIT HERE: Your job title -->
-          <h2 class="hero-subtitle">Creative Graphic Designer & Junior Web Developer</h2>
-          <!-- ✏️ EDIT HERE: Your short bio -->
-          <p class="hero-description">
-            I’m GM Abdullah, a professional Graphic Designer specializing in personal branding, logo design, and creating memorable brand identities. 
-            I craft clean, modern, and impactful designs, combining creative design with clean code or design accessories  to deliver exceptional digital experiences 
-            that help businesses and individuals stand out rapidly. Passionate about building products that make a difference, I continuously hone my web development 
-            and design skills and am open to work anytime, ready to bring your vision to life.
-          </p>
-          <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Contact Me</a>
-            <a href="#projects" class="btn btn-secondary">View Projects</a>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
 
-    <!-- ============================================
-         🎯 ABOUT SECTION
-         ✏️ EDIT: Your detailed bio and stats
-    ============================================= -->
-    <section class="section about" id="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-          <div class="about-content">
-            <!-- ✏️ EDIT HERE: Your detailed bio paragraphs -->
-            <p class="about-text">
-              Hi, I'm GM-Aby — a multidisciplinary Graphic Designer and Junior Full-Stack Developer 
-              I committed to creating meaningful visuals and smart digital experiences. combine creativity, strategy, 
-              and clean engineering to deliver work that not only looks great but also solves real problems for brands.
-
-            </p>
-            <p class="about-text">
-              Over the past years, I’ve worked on logos, brand identity systems, social media creatives, business cards, banners, thumbnails, 
-              and various print/digital designs. At the same time, I’ve been developing modern, responsive websites—turning ideas into smooth, 
-              user-focused interfaces.
-
-            </p>
-            <p class="about-text">
-              What makes my work different is the balance between creativity and logic.
-              I don’t just design something that “looks cool”—I design with purpose. Every color, layout, 
-              and type choice supports your brand’s identity. Every website I build is structured for speed, usability, and a clean user experience.
-
-            </p>
-            <!-- ✏️ EDIT HERE: Update your stats -->
-            <div class="about-stats">
-              <div class="stat">
-                <span class="stat-number">50+</span>
-                <span class="stat-label">Projects Completed</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">5+</span>
-                <span class="stat-label">Years Experience</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">30+</span>
-                <span class="stat-label">Happy Clients</span>
-              </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-20 z-10 w-full relative">
+            <!-- Left Content -->
+            <div class="flex-1 text-center md:text-left mt-10 md:mt-0">
+                <p class="hero-greeting text-electricPurple font-medium tracking-wide mb-3 uppercase text-sm flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-code"></i> Hello, I'm
+                </p>
+                <!-- Punchy Layout from Site 2 -->
+                <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight">
+                    G.M. <br class="hidden md:block"/><span class="gradient-text">Abdullah</span>
+                </h1>
+                <h2 class="hero-subtitle text-xl md:text-2xl font-bold gradient-text mb-6">
+                    Creative Graphic Designer & Junior Web Developer
+                </h2>
+                <!-- Detailed Bio from Site 1 -->
+                <p class="hero-description text-base md:text-lg text-darkGray mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                    I’m GM Abdullah, a professional Graphic Designer specializing in personal branding, logo design, and creating memorable brand identities. 
+                    I craft clean, modern, and impactful designs, combining creative design with clean code or design accessories to deliver exceptional digital experiences 
+                    that help businesses and individuals stand out rapidly. Passionate about building products that make a difference, I continuously hone my web development 
+                    and design skills and am open to work anytime, ready to bring your vision to life.
+                </p>
+                <!-- Combined CTA buttons -->
+                <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-gradient-to-r from-electricPurple to-[#c678dd] hover:from-electricPurpleHover hover:to-[#d08ce3] text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-[0_4px_15px_rgba(138,43,226,0.3)] hover:shadow-[0_6px_25px_rgba(138,43,226,0.5)] flex items-center justify-center gap-2 hover:-translate-y-1">
+                        Contact Me <i class="fa-solid fa-paper-plane text-sm ml-1"></i>
+                    </a>
+                    <a href="#projects" class="border border-charcoal bg-transparent hover:border-electricPurple px-8 py-3.5 rounded-full font-semibold transition-all hover:bg-electricPurple/10 flex items-center justify-center gap-2 text-white hover:-translate-y-1">
+                        View Projects <i class="fa-solid fa-arrow-down text-sm ml-1"></i>
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="about-image">
-            <div class="about-image-wrapper">
-              <!-- ✏️ EDIT HERE: Replace with a workspace/secondary photo -->
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
-                alt="Designer workspace"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         🎯 SKILLS SECTION
-         ✏️ EDIT: Your skills and expertise levels
-    ============================================= -->
-    <section class="section skills" id="skills">
-      <div class="container">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="skills-grid">
-         <!-- ✏️ SKILL CARD 1 -->
-          <div class="skill-card">
-            <div class="skill-icon">☬🖌</div>
-            <h3>Professional Logo Design</h3>
-            <p>Adobe Illustrator, Adobe Photoshop</p>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="98"></div>
-            </div>
-          </div>
-          <!-- ✏️ SKILL CARD 2 -->
-          <div class="skill-card">
-            <div class="skill-icon">💼</div>
-            <h3>Personal Branding</h3>
-            <p>Logo, business profile, banners, Brand identity</p>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="94"></div>
-            </div>
-          </div>
-          <!-- ✏️ SKILL CARD 3 -->
-          <div class="skill-card">
-            <div class="skill-icon">⚛️</div>
-            <h3>Frontend Development</h3>
-            <p>HTML, CSS, JavaScript</p>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="65"></div>
-            </div>
-          </div>
-          <!-- ✏️ SKILL CARD 4 -->
-          <div class="skill-card">
-            <div class="skill-icon">🔧</div>
-            <h3>Backend Development</h3>
-            <p>Node.js, Python, PostgreSQL, MongoDB</p>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="40"></div>
-            </div>
-          </div>
-          <!-- ✏️ SKILL CARD 5-->
-          <div class="skill-card">
-            <div class="skill-icon">🎨</div>
-            <h3>UI/UX Design</h3>
-            <p>Figma, Adobe XD, Prototyping</p>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="35"></div>
-            </div>
-          </div>
-          <!-- ✏️ SKILL CARD 6 -->
-          <div class="skill-card">
-            <div class="skill-icon">🤖</div>
-            <h3>AI & Machine Learning</h3>
-            <p>TensorFlow, PyTorch, OpenAI APIs</p>
-            <div class="skill-bar">
-              <div class="skill-progress" data-progress="25"></div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         🎯 PROJECTS SECTION
-         ✏️ EDIT: Add YOUR projects here!
-         
-         📋 TO ADD A NEW PROJECT:
-         1. Copy one of the project-card divs below
-         2. Paste it inside the projects-grid
-         3. Update: image URL, title, description, tags, link
-    ============================================= -->
-    <section class="section projects" id="projects">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-          
-          <!-- ╔═══════════════════════════════════════════╗
-               ║  🚀 PROJECT 1 - Edit or replace this      ║
-               ╚═══════════════════════════════════════════╝ -->
-          <div class="project-card">
-            <div class="project-image">
-              <!-- ✏️ Replace image URL with your project screenshot -->
-              <img
-                src="img/Office Wall Glass Logo Mockup.png"
-                alt="Personal Branding"
-              />
-              <div class="project-overlay">
-                <!-- ✏️ Replace # with your project URL -->
-                <a href="img/PDF...Office Wall Glass Logo Mockup....pdf" target="_blank" class="project-link">View Project</a>
-              </div>
-            </div>
-            <div class="project-content">
-              <!-- ✏️ Project title -->
-              <h3>Personal Branding</h3>
-              <!-- ✏️ Project description -->
-              <p>
-               A clean and modern personal branding system crafted to reflect clarity, confidence, and a distinct visual identity.
-              </p>
-              <!-- ✏️ Technology tags used -->
-              <div class="project-tags">
-                <span>Logo Design</span><span>Business Profile</span><span>Adobe Illustrator</span>
-                <span>Adobe Photoshop</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ╔═══════════════════════════════════════════╗
-               ║  🚀 PROJECT 2 - Edit or replace this      ║
-               ╚═══════════════════════════════════════════╝ -->
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="img/Exclusive luxury logo mockup.png"
-                alt="Analytics Dashboard"
-              />
-              <div class="project-overlay">
-                <a href="img/Exclusive luxury logo mockup.png" target="_blank" class="project-link">View Project</a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Professional Brand identity</h3>
-              <p>
-                A complete brand identity design built with strategic visuals, consistent structure, and a strong professional presence.
-              </p>
-              <div class="project-tags">
-                <span>Adobe Photoshop</span><span>Adobe Illustrator</span>
-                
-              </div>
-            </div>
-          </div>
-
-          <!-- ╔═══════════════════════════════════════════╗
-               ║  🚀 PROJECT 3 - Edit or replace this      ║
-               ╚═══════════════════════════════════════════╝ -->
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="img/Engraved Logo Mockup on Wood.png"
-                alt="Social Media App"
-              />
-              <div class="project-overlay">
-                <a href="img/Engraved Logo Mockup on Wood.png" target="_blank" class="project-link">View Project</a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Social Media Marketing Brand Logo</h3>
-              <p>
-                A refined, minimalistic logo design focused on strong form, clear symbolism, and long-lasting brand impact.
-              </p>
-              <div class="project-tags">
-                <span>Adobe Illustrator</span><span>Adobe Photoshop</span>
-              
-              </div>
-            </div>
-          </div>
-
-          <!-- ╔═══════════════════════════════════════════╗
-               ║  🚀 PROJECT 4 - Edit or replace this      ║
-               ╚═══════════════════════════════════════════╝ -->
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop"
-                alt="AI Content Generator"
-              />
-              <div class="project-overlay">
-                <a href="#" class="project-link">View Project</a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Web Skill Building Projects</h3>
-              <p>
-                An ongoing collection of web development practice projects designed to strengthen my fundamentals. From semantic HTML to modern CSS layouts and responsive UI patterns, 
-                this space reflects my continuous learning process and improvement as a frontend developer.
-              </p>
-              <div class="project-tags">
-                <span>Next.js</span><span>OpenAI</span><span>Node.js</span><span>HTML</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ╔═══════════════════════════════════════════════════════════════╗
-               ║  ➕ ADD NEW PROJECTS HERE                                      ║
-               ║                                                                ║
-               ║  Copy a project-card from above and paste here.               ║
-               ║  Then update the image, title, description, tags, and link.   ║
-               ╚═══════════════════════════════════════════════════════════════╝ -->
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         🎯 EXPERIENCE SECTION
-         ✏️ EDIT: Your work experience/timeline
-    ============================================= -->
-    <section class="section experience" id="experience">
-      <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <!-- ✏️ EXPERIENCE 1 - Most recent first -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2020 - Present</span>
-              <h3>Personal Branding</h3>
-              <h4>Adobe Illustrator.</h4>
-              <p>
-                Developing complete personal brand systems—consistent visuals, messaging elements, 
-                and identity frameworks that communicate clarity and individuality.
-               </p> 
-            </div>
-          </div>
-          <!-- ✏️ EXPERIENCE 2 -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2018 - 2022</span>
-              <h3>Logo Design</h3>
-              <h4>Adobe Photoshop & Adobe Illustrator.</h4>
-              <p>
-                Crafting clean, scalable, and meaningful logo systems with strong visual identity 
-                and modern design principles.
-              </p>
-              
-            </div>
-          </div>
-          <!-- ✏️ EXPERIENCE 3 -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2024 - Present</span>
-              <h3>Frontend Developer (Learning & Practicing)</h3>
-              <h4>StartupXYZ</h4>
-              <p>
-                Improving core frontend skills through hands-on projects—focusing 
-                on semantic HTML, modern CSS, responsive layouts, and clean UI implementation.
-              </p>
-            </div>
-          </div>
-          <!-- ✏️ EXPERIENCE 4 -->
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2025 - Present</span>
-              <h3>Junior Developer</h3>
-              <h4>WebDev Studio</h4>
-              <p>
-                Started my professional journey building websites and learning
-                industry best practices. Gained expertise in JavaScript, HTML,
-                CSS, and various frameworks.
-              </p>
-            </div>
-          </div>
-          <!-- ✏️ ADD MORE EXPERIENCE: Copy a timeline-item and paste here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================
-         🎯 TESTIMONIALS SECTION
-         ✏️ EDIT: Client/colleague testimonials
-    ============================================= -->
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <h2 class="section-title">What People Say</h2>
-        <div class="testimonials-grid">
-          <!-- ✏️ TESTIMONIAL 1 -->
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>
-                " We worked closely with GM Abdullah over several years during the early stages of our organization. His role went far beyond graphic design — he became an essential creative partner for our brand.
-                
-                 From logos and brand visuals to promotional materials and digital assets, his contributions played a major role in shaping our professional image. He consistently delivered high-quality work,
-                understood our vision clearly, and often took initiative in guiding creative decisions.
-                
-                 His reliability, creative mindset, and ability to handle responsibility made him a key part of our growth journey."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              
-              <div>
-                <h4>HM.M Zaman</h4>
-                <span>Founder & CEO, The KMHQ</span>
-              </div>
-            </div>
-          </div>
-          <!-- ✏️ TESTIMONIAL 2 -->
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>
-               GM Abdullah supported our organization with a wide range of creative work, including branding, banners, course launch visuals, and online marketing materials.
-                
-                What stood out most was his ownership mentality — he didn’t just execute tasks, he ensured everything met a professional standard. Even during tight deadlines, 
-                he remained organized and proactive, often coordinating visuals and media requirements independently.
-                
-                His versatility and commitment made collaboration smooth and effective
-              </p>
-            </div>
-            <div class="testimonial-author">
             
-              <div>
-                <h4>K.A. Arefy</h4>
-                <span>Executive Director, The KMHQ</span>
-              </div>
+            <!-- Right Profile Image (Site 2 style) -->
+            <div class="flex-1 flex justify-center mt-10 md:mt-0 relative w-full">
+                <!-- Site 1 specific aura around the image -->
+                <div class="image-wrapper relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-1.5 bg-gradient-to-tr from-electricPurple to-[#c678dd] shadow-[0_0_30px_rgba(138,43,226,0.3)] group cursor-pointer transition-transform duration-500 hover:scale-105">
+                     <div class="w-full h-full rounded-full overflow-hidden border-4 border-deepBlack relative z-10">
+                        <img src="Black and Grey Modern Professional Profile LinkedIn Profile Picture.png" alt="G.M. Abdullah" 
+                             class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110">
+                     </div>
+                </div>
             </div>
-          </div>
-         
-         <!-- ✏️ TESTIMONIAL 3 -->
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>
-                “I collaborated with Abdullah for multiple online projects related to personal branding and digital course launches. 
-                He handled logo design, banners, and promotional creatives with great attention to detail.
-                
-                His understanding of branding aesthetics and audience-focused design helped elevate the overall presentation of our projects. 
-                Communication was always clear, and revisions were handled professionally.
-                
-                I would confidently recommend him to anyone looking for a dependable and skilled graphic designer.”
-              </p>
-            </div>
-            <div class="testimonial-author">
-              
-              <div>
-                <h4>Online Client (name reserved)</h4>
-                <span>Business Consultant & Online Educator</span>
-              </div>
-            </div>
-          </div>
-        <!-- ✏️ TESTIMONIAL 4 -->
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <p>
-                “A highly dependable graphic designer with strong creative judgment and a professional work ethic. 
-                GM Abdullah consistently delivered impactful designs that supported both organizational and personal branding goals”
-              </p>
-            </div>
-            <div class="testimonial-author">
-              
-              <div>
-                <h4>Personal Clients </h4>
-                <span>Online Marketplaces</span>
-              </div>
-            </div>
-          </div>
-          <!-- ✏️ ADD MORE TESTIMONIALS: Copy a testimonial-card and paste here -->
         </div>
-      </div>
+        
+        <!-- Scroll Down indicator from Site 1 -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity hidden md:flex">
+            <span class="text-xs uppercase tracking-[0.2em] font-medium text-darkGray">Scroll</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-electricPurple to-transparent animate-[scrollLine_2s_ease-in-out_infinite]"></div>
+        </div>
     </section>
 
-    <!-- ============================================
-         🎯 CONTACT SECTION
-         ✏️ EDIT: Your contact info and social links
-    ============================================= -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Let's work together</h3>
-            <p>
-              I'm always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
-            </p>
-            <div class="contact-details">
-              <!-- ✏️ EDIT: Your email -->
-              <div class="contact-item">
-                <span class="contact-icon">📧</span>
-                <span>codexabdullah81@gmail.com</span>
-              </div>
-              <!-- ✏️ EDIT: Your location -->
-              <div class="contact-item">
-                <span class="contact-icon">📍</span>
-                <span>Barisal, Bangladesh</span>
-              </div>
-              <!-- ✏️ EDIT: Your phone (or remove if not wanted) -->
-              <div class="contact-item">
-                <span class="contact-icon">📱</span>
-                <span>+8801601477374</span>
-              </div>
+    <!-- About Me Section -->
+    <section id="about" class="py-24 bg-charcoal relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">About Me</h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-electricPurple to-[#c678dd] mx-auto rounded-full shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
             </div>
-            <!-- ✏️ EDIT: Your social media URLs -->
-            <div class="social-links">
-              <a href="https://www.behance.net/gmabdulla" class="social-link" target="_blank">behance</a>
-              <a href="https://www.linkedin.com/in/gm-abdullah" class="social-link" target="_blank">LinkedIn</a>
-              <a href="https://www.fiverr.com/sellers/codex_aby" class="social-link" target="_blank">Fiverr</a>
+            
+            <div class="about-grid grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                
+                <!-- Left Details (Site 1 detailed bio) -->
+                <div class="about-content bg-lighterCharcoal p-8 lg:p-10 rounded-2xl border border-white/5 shadow-2xl relative overflow-hidden group">
+                     <div class="absolute -top-20 -right-20 w-48 h-48 bg-electricPurple/10 rounded-full blur-3xl group-hover:bg-electricPurple/20 transition-colors duration-700"></div>
+                     <i class="fa-solid fa-quote-left text-5xl text-electricPurple/20 mb-6 inline-block"></i>
+                    
+                    <p class="text-base lg:text-lg text-lightGray leading-relaxed mb-6 font-medium">
+                        Hi, I'm <strong class="text-white">GM-Aby</strong> — a multidisciplinary Graphic Designer and Junior Full-Stack Developer 
+                        committed to creating meaningful visuals and smart digital experiences. I combine creativity, strategy, 
+                        and clean engineering to deliver work that not only looks great but also solves real problems for brands.
+                    </p>
+                    <p class="text-base lg:text-lg text-darkGray leading-relaxed mb-6">
+                        Over the past years, I’ve worked on logos, brand identity systems, social media creatives, business cards, banners, thumbnails, 
+                        and various print/digital designs. At the same time, I’ve been developing modern, responsive websites—turning ideas into smooth, 
+                        user-focused interfaces.
+                    </p>
+                    <p class="text-base lg:text-lg text-darkGray leading-relaxed mb-8">
+                        What makes my work different is the balance between creativity and logic.
+                        I don’t just design something that “looks cool”—I design with purpose. Every color, layout, 
+                        and type choice supports your brand’s identity. Every website I build is structured for speed, usability, and a clean user experience.
+                    </p>
+                    
+                    <!-- Stats (Site 1 stats merged into Site 2 UI) -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                        <div class="stat text-center">
+                            <span class="block text-3xl font-extrabold gradient-text mb-1 tracking-tight">50+</span>
+                            <span class="text-xs uppercase tracking-wider text-darkGray font-medium">Projects</span>
+                        </div>
+                        <div class="stat text-center border-x border-white/5">
+                            <span class="block text-3xl font-extrabold gradient-text mb-1 tracking-tight">5+</span>
+                            <span class="text-xs uppercase tracking-wider text-darkGray font-medium">Years Exp.</span>
+                        </div>
+                        <div class="stat text-center">
+                            <span class="block text-3xl font-extrabold gradient-text mb-1 tracking-tight">30+</span>
+                            <span class="text-xs uppercase tracking-wider text-darkGray font-medium">Clients</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Grid Display (Site 2 grid structure) -->
+                <div class="about-image grid grid-cols-2 gap-4 lg:gap-6">
+                    <div class="bg-deepBlack p-6 lg:p-8 rounded-2xl border border-charcoal text-center hover:border-electricPurple/40 transition-colors duration-300 shadow-lg group hover:-translate-y-2">
+                        <i class="fa-solid fa-bezier-curve text-4xl text-electricPurple mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Design</h3>
+                        <p class="text-sm text-darkGray leading-relaxed">Logos, Flyers, Full-suite Branding</p>
+                    </div>
+                    <div class="bg-deepBlack p-6 lg:p-8 rounded-2xl border border-charcoal text-center hover:border-electricPurple/40 transition-colors duration-300 shadow-lg group hover:-translate-y-2">
+                        <i class="fa-solid fa-code text-4xl text-electricPurple mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Code</h3>
+                        <p class="text-sm text-darkGray leading-relaxed">HTML, CSS, JavaScript, Frameworks</p>
+                    </div>
+                    <div class="bg-deepBlack p-6 lg:p-8 rounded-2xl border border-charcoal text-center hover:border-electricPurple/40 transition-colors duration-300 shadow-lg group hover:-translate-y-2">
+                        <i class="fa-solid fa-graduation-cap text-4xl text-electricPurple mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Student</h3>
+                        <p class="text-sm text-darkGray leading-relaxed">Computer Science & Engineering</p>
+                    </div>
+                    <div class="bg-deepBlack p-6 lg:p-8 rounded-2xl border border-charcoal text-center hover:border-electricPurple/40 transition-colors duration-300 shadow-lg group hover:-translate-y-2">
+                        <i class="fa-solid fa-lightbulb text-4xl text-electricPurple mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Innovator</h3>
+                        <p class="text-sm text-darkGray leading-relaxed">Creative Problem Solver</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <form class="contact-form" id="contact-form"   action="https://formspree.io/f/xaqwzpvw" method="POST">
-            <div class="form-group">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required
-              />
-              <label for="name">Your Name</label>
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <label for="email">Your Email</label>
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Subject"
-              />
-              <label for="subject">Subject</label>
-            </div>
-            <div class="form-group">
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                required
-              ></textarea>
-              <label for="message">Your Message</label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              Send Message
-            </button>
-          </form>
         </div>
-      </div>
     </section>
 
-    <!-- ============================================
-         🎯 FOOTER
-         ✏️ EDIT: Your name and footer links
-    ============================================= -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <!-- ✏️ EDIT: Your logo/initials -->
-          <a href="#hero" class="footer-logo">GM-Aby</a>
-          <!-- ✏️ EDIT: Your name -->
-          <p>© 2024 GM-Aby. Crafted with passion.</p>
-          <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-deepBlack">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Skills & Expertise</h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-electricPurple to-[#c678dd] mx-auto rounded-full shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
+            </div>
+
+            <!-- Site 2 Skill Progress Bars Section -->
+            <div class="max-w-4xl mx-auto mb-16">
+                 <div class="space-y-8 bg-charcoal p-8 lg:p-10 rounded-2xl border border-white/5 shadow-2xl">
+                    <h3 class="text-xl font-bold text-white mb-8 border-b border-white/10 pb-4">Technical Proficiency</h3>
+                    <!-- Skill 1 -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-3">
+                            <span class="font-medium text-lightGray flex items-center gap-2"><i class="fa-solid fa-pen-nib text-electricPurple w-5"></i> Graphic Design (Logo, Branding, Print)</span>
+                            <span class="text-electricPurple font-bold">0%</span>
+                        </div>
+                         <div class="w-full bg-deepBlack lg:bg-lighterCharcoal rounded-full h-2.5 overflow-hidden">
+                            <div class="skill-progress-bar bg-gradient-to-r from-electricPurple to-[#c678dd] h-full rounded-full relative" style="width: 0%;" data-progress="95">
+                                <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(138,43,226,0.8)]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-3">
+                            <span class="font-medium text-lightGray flex items-center gap-2"><i class="fa-brands fa-html5 text-electricPurple w-5"></i> HTML/CSS Frontend</span>
+                            <span class="text-electricPurple font-bold">0%</span>
+                        </div>
+                         <div class="w-full bg-deepBlack lg:bg-lighterCharcoal rounded-full h-2.5 overflow-hidden">
+                            <div class="skill-progress-bar bg-gradient-to-r from-electricPurple to-[#c678dd] h-full rounded-full relative" style="width: 0%;" data-progress="80">
+                                <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(138,43,226,0.8)]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="skill-bar-container">
+                        <div class="flex justify-between mb-3">
+                            <span class="font-medium text-lightGray flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-electricPurple w-5"></i> UI/UX Design</span>
+                            <span class="text-electricPurple font-bold">0%</span>
+                        </div>
+                         <div class="w-full bg-deepBlack lg:bg-lighterCharcoal rounded-full h-2.5 overflow-hidden">
+                            <div class="skill-progress-bar bg-gradient-to-r from-electricPurple to-[#c678dd] h-full rounded-full relative" style="width: 0%;" data-progress="75">
+                                <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(138,43,226,0.8)]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="skill-bar-container pb-2">
+                        <div class="flex justify-between mb-3">
+                            <span class="font-medium text-lightGray flex items-center gap-2"><i class="fa-brands fa-js text-electricPurple w-5"></i> JavaScript / Node.js</span>
+                            <span class="text-electricPurple font-bold">0%</span>
+                        </div>
+                         <div class="w-full bg-deepBlack lg:bg-lighterCharcoal rounded-full h-2.5 overflow-hidden">
+                            <div class="skill-progress-bar bg-gradient-to-r from-electricPurple to-[#c678dd] h-full rounded-full relative" style="width: 0%;" data-progress="60">
+                                <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(138,43,226,0.8)]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Site 1 visual cards below the bars for a fuller, rich layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="skill-card bg-charcoal border border-white/5 rounded-2xl p-8 hover:-translate-y-2 hover:border-electricPurple/60 transition-all duration-300 shadow-lg">
+                    <div class="w-14 h-14 rounded-full bg-electricPurple/10 flex items-center justify-center mb-6">
+                         <span class="text-2xl text-electricPurple">☬</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Professional Logo Design</h3>
+                    <p class="text-darkGray text-sm leading-relaxed mb-4">Adobe Illustrator, Adobe Photoshop</p>
+                </div>
+                
+                <div class="skill-card bg-charcoal border border-white/5 rounded-2xl p-8 hover:-translate-y-2 hover:border-electricPurple/60 transition-all duration-300 shadow-lg">
+                    <div class="w-14 h-14 rounded-full bg-electricPurple/10 flex items-center justify-center mb-6">
+                         <span class="text-2xl text-electricPurple"><i class="fa-solid fa-briefcase"></i></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Personal Branding</h3>
+                    <p class="text-darkGray text-sm leading-relaxed mb-4">Logo, business profile, banners, Brand identity</p>
+                </div>
+
+                <div class="skill-card bg-charcoal border border-white/5 rounded-2xl p-8 hover:-translate-y-2 hover:border-electricPurple/60 transition-all duration-300 shadow-lg">
+                    <div class="w-14 h-14 rounded-full bg-electricPurple/10 flex items-center justify-center mb-6">
+                         <span class="text-2xl text-electricPurple"><i class="fa-solid fa-robot"></i></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI & Machine Learning</h3>
+                    <p class="text-darkGray text-sm leading-relaxed mb-4">TensorFlow, PyTorch, OpenAI APIs, AI Prompting</p>
+                </div>
+            </div>
+            
         </div>
-      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Featured Projects</h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-electricPurple to-[#c678dd] mx-auto rounded-full shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
+                <p class="mt-4 text-darkGray font-medium max-w-2xl mx-auto">A selection of my best design works, frontend applications, and comprehensive branding packages.</p>
+            </div>
+
+            <!-- Merged layout using Site 2's robust tailwind cards and Site 1's detailed content structure -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                
+                <!-- Project 1 (Site 1: Personal Branding) -->
+                <div class="project-card group rounded-2xl overflow-hidden bg-deepBlack border border-white/5 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:border-electricPurple/50">
+                    <div class="relative h-64 overflow-hidden bg-lighterCharcoal">
+                        <!-- Use the high-res office wall glass image here -->
+                        <img src="Office Wall Glass Logo Mockup.png" alt="Personal Branding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="img/PDF...Office Wall Glass Logo Mockup....pdf" target="_blank" class="bg-electricPurple hover:bg-white hover:text-deepBlack text-white font-bold py-3 px-8 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">View Details</a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-electricPurple bg-electricPurple/10 px-3 py-1 rounded-full">Branding</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-electricPurple transition-colors duration-300">Office Glass Identity</h3>
+                        <p class="text-darkGray mb-6 text-sm leading-relaxed">A clean and modern personal branding system crafted to reflect clarity, confidence, and a distinct visual identity in a high-profile corporate environment.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Logo Design</span>
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Adobe Illustrator</span>
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Site 1: Exclusive Luxury Logo) -->
+                <div class="project-card group rounded-2xl overflow-hidden bg-deepBlack border border-white/5 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:border-electricPurple/50">
+                    <div class="relative h-64 overflow-hidden bg-lighterCharcoal">
+                        <img src="Exclusive luxury logo mockup.png" alt="Analytics Dashboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="Exclusive luxury logo mockup.png" target="_blank" class="bg-electricPurple hover:bg-white hover:text-deepBlack text-white font-bold py-3 px-8 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">View Image</a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                         <div class="flex items-center gap-3 mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#c678dd] bg-[#c678dd]/10 px-3 py-1 rounded-full">Identity Design</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#c678dd] transition-colors duration-300">Professional Brand Identity</h3>
+                        <p class="text-darkGray mb-6 text-sm leading-relaxed">A complete brand identity design built with strategic visuals, consistent structure, and a strong professional presence aimed at premium clientele.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Adobe Photoshop</span>
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Creative Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Site 1: Engraved Wood Logo) -->
+                <div class="project-card group rounded-2xl overflow-hidden bg-deepBlack border border-white/5 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:border-electricPurple/50">
+                    <div class="relative h-64 overflow-hidden bg-lighterCharcoal">
+                        <img src="Engraved Logo Mockup on Wood.png" alt="Social Media Logo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <a href="Engraved Logo Mockup on Wood.png" target="_blank" class="bg-electricPurple hover:bg-white hover:text-deepBlack text-white font-bold py-3 px-8 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">View Image</a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-electricPurple bg-electricPurple/10 px-3 py-1 rounded-full">Marketing Asset</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-electricPurple transition-colors duration-300">Social Media Marketing Logo</h3>
+                        <p class="text-darkGray mb-6 text-sm leading-relaxed">A refined, minimalistic logo design focused on strong form, clear symbolism, and long-lasting brand impact specifically optimized for social platforms.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Vectors</span>
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Adobe Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Site 2: Premium Business Card / Site 1 Web skills) -->
+                <div class="project-card group rounded-2xl overflow-hidden bg-deepBlack border border-white/5 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:border-electricPurple/50">
+                    <div class="relative h-64 overflow-hidden bg-lighterCharcoal">
+                        <img src="business card.jpg" alt="Business Card" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-deepBlack via-deepBlack/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                             <a href="business card.jpg" target="_blank" class="bg-electricPurple hover:bg-white hover:text-deepBlack text-white font-bold py-3 px-8 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">View Image</a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#c678dd] bg-[#c678dd]/10 px-3 py-1 rounded-full">Print Medium</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#c678dd] transition-colors duration-300">Premium Business Collateral</h3>
+                        <p class="text-darkGray mb-6 text-sm leading-relaxed">High-fidelity print design assets emphasizing luxury and tactile premium qualities. Built to create unforgettable first impressions at professional networking events.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">Print Design</span>
+                            <span class="text-xs text-lightGray bg-charcoal border border-white/10 px-3 py-1 rounded-md">CMYK</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#contact" class="inline-flex items-center gap-2 px-8 py-3.5 border border-electricPurple text-white hover:bg-electricPurple/10 hover:border-electricPurpleHover rounded-full transition-all duration-300 font-semibold text-sm">
+                    Want to see more? Get in contact <i class="fa-solid fa-arrow-right text-xs mt-0.5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-24 bg-deepBlack">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Experience & Education</h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-electricPurple to-[#c678dd] mx-auto rounded-full shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
+            </div>
+
+            <!-- Merged Timeline: Integrating site 1 specific code into site 2 tailwind class structure -->
+            <div class="timeline mt-12">
+                
+                <!-- Entry 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date font-bold shadow-sm">Present</span>
+                        <h3 class="text-white text-xl font-bold">Diploma in Computer Science</h3>
+                        <h4 class="text-[#c678dd] text-sm font-semibold mb-3 uppercase tracking-wider">Barisal Polytechnic Institute</h4>
+                        <p class="text-lightGray leading-relaxed text-sm">
+                            Currently pursuing my degree, focusing on software development, algorithms, and full-stack web technologies alongside core computer theory. Building a strong foundation for future technological challenges.
+                        </p> 
+                    </div>
+                </div>
+
+                <!-- Entry 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date font-bold shadow-sm">2021 - Present</span>
+                        <h3 class="text-white text-xl font-bold">Graphic Designer</h3>
+                        <h4 class="text-[#c678dd] text-sm font-semibold mb-3 uppercase tracking-wider">Freelance / Educational Platforms</h4>
+                        <p class="text-lightGray leading-relaxed text-sm">
+                            Worked with various clients globally to design logos, brand identities, flyers, and business cards. Consistently delivering impactful designs that support both organizational and personal branding goals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Entry 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date font-bold shadow-sm">2024 - Present</span>
+                        <h3 class="text-white text-xl font-bold">Junior Frontend Developer</h3>
+                        <h4 class="text-[#c678dd] text-sm font-semibold mb-3 uppercase tracking-wider">Self-Directed Learning & Practice</h4>
+                        <p class="text-lightGray leading-relaxed text-sm">
+                            Improving core frontend skills through hands-on projects—focusing on semantic HTML, modern CSS, responsive layouts, and clean UI implementation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Entry 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date font-bold shadow-sm">2020</span>
+                        <h3 class="text-white text-xl font-bold">Creative Design Foundations</h3>
+                        <h4 class="text-[#c678dd] text-sm font-semibold mb-3 uppercase tracking-wider">Design Institute</h4>
+                        <p class="text-lightGray leading-relaxed text-sm">
+                            Completed comprehensive foundational training in the Adobe Creative Suite, heavily emphasizing Photoshop, Illustrator, and Premiere Pro to establish a bedrock of design theory and execution.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="py-24 bg-charcoal overflow-hidden border-b border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title text-center mb-16">
+                <!-- i icon is hidden because we have a header, removed for cleaner look -->
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Client Reviews</h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-electricPurple to-[#c678dd] mx-auto rounded-full shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
+            </div>
+
+            <!-- Merged Slide container logic from site 2 w/ content from site 1 -->
+            <div class="relative bg-deepBlack p-10 md:p-14 rounded-3xl border border-white/5 shadow-2xl testimonial-card group hover:-translate-y-1 transition-transform duration-500">
+                <!-- Quotes icon watermark -->
+                <div class="absolute top-4 left-6 text-white/5 text-9xl font-serif select-none pointer-events-none transition-colors duration-500 group-hover:text-electricPurple/10 leading-[0]">"</div>
+                
+                <!-- Slider Container (min-height to prevent jumping) -->
+                <div class="grid relative min-h-[220px] items-center">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide col-start-1 row-start-1 w-full text-center">
+                        <p class="text-base md:text-lg italic text-lightGray mb-8 px-2 md:px-10 leading-relaxed font-medium">
+                            “We worked closely with GM Abdullah over several years during the early stages of our organization. His role went far beyond graphic design — he became an essential creative partner for our brand. From logos and brand visuals to promotional materials and digital assets, his contributions played a major role in shaping our professional image. His reliability, creative mindset, and ability to handle responsibility made him a key part of our growth journey.”
+                        </p>
+                        <h4 class="font-bold text-white text-xl">HM.M Zaman</h4>
+                        <p class="text-xs text-[#c678dd] uppercase tracking-wider mt-1.5 font-semibold">Founder & CEO, The KMHQ</p>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide hidden opacity-0 col-start-1 row-start-1 w-full text-center">
+                        <p class="text-base md:text-lg italic text-lightGray mb-8 px-2 md:px-10 leading-relaxed font-medium">
+                            “GM Abdullah supported our organization with a wide range of creative work, including branding, banners, course launch visuals, and online marketing materials. What stood out most was his ownership mentality — he didn’t just execute tasks, he ensured everything met a professional standard. Even during tight deadlines, he remained organized and proactive. His versatility and commitment made collaboration smooth and effective.”
+                        </p>
+                        <h4 class="font-bold text-white text-xl">K.A. Arefy</h4>
+                        <p class="text-xs text-[#c678dd] uppercase tracking-wider mt-1.5 font-semibold">Executive Director, The KMHQ</p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide hidden opacity-0 col-start-1 row-start-1 w-full text-center">
+                        <p class="text-base md:text-lg italic text-lightGray mb-8 px-2 md:px-10 leading-relaxed font-medium">
+                            “I collaborated with Abdullah for multiple online projects related to personal branding and digital course launches. He handled logo design, banners, and promotional creatives with great attention to detail. His understanding of branding aesthetics and audience-focused design helped elevate the overall presentation of our projects. Communication was always clear, and revisions were handled professionally.”
+                        </p>
+                        <h4 class="font-bold text-white text-xl">Online Educator</h4>
+                        <p class="text-xs text-[#c678dd] uppercase tracking-wider mt-1.5 font-semibold">Business Consultant (Name Reserved)</p>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="testimonial-slide hidden opacity-0 col-start-1 row-start-1 w-full text-center">
+                        <p class="text-base md:text-lg italic text-lightGray mb-8 px-2 md:px-10 leading-relaxed font-medium">
+                            “A highly dependable graphic designer with strong creative judgment and a professional work ethic. GM Abdullah consistently delivered impactful designs that supported both organizational and personal branding goals.”
+                        </p>
+                        <h4 class="font-bold text-white text-xl">Personal Clients</h4>
+                        <p class="text-xs text-[#c678dd] uppercase tracking-wider mt-1.5 font-semibold">Online Marketplaces</p>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="testimonial-slide hidden opacity-0 col-start-1 row-start-1 w-full text-center">
+                        <p class="text-base md:text-lg italic text-lightGray mb-8 px-2 md:px-10 leading-relaxed font-medium">
+                            “The flyer designs were professional and exactly what we needed for our marketing campaign. Excellent communication and fast delivery.”
+                        </p>
+                        <h4 class="font-bold text-white text-xl">MD. Mash</h4>
+                        <p class="text-xs text-[#c678dd] uppercase tracking-wider mt-1.5 font-semibold">Marketing Director</p>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <div class="flex justify-center gap-4 mt-8 relative z-10">
+                    <button id="prevSlide" class="w-12 h-12 rounded-full border border-charcoal hover:border-electricPurple bg-charcoal hover:bg-electricPurple/20 text-white flex items-center justify-center transition-all duration-300">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="nextSlide" class="w-12 h-12 rounded-full border border-charcoal hover:border-electricPurple bg-charcoal hover:bg-electricPurple/20 text-white flex items-center justify-center transition-all duration-300">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-deepBlack relative overflow-hidden">
+        <!-- Decoration from site 1 -->
+        <div class="absolute -right-40 -top-40 w-96 h-96 bg-electricPurple/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title text-center md:text-left mb-16 hidden md:block">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Let's Work Together</h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-electricPurple to-[#c678dd] rounded-full shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
+            </div>
+             <!-- Mobile centered header fallback -->
+            <div class="section-title text-center mb-16 md:hidden">
+                <h2 class="text-3xl font-extrabold text-white mb-4">Let's Work Together</h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-electricPurple to-[#c678dd] mx-auto rounded-full shadow-[0_0_10px_rgba(138,43,226,0.5)]"></div>
+            </div>
+
+            <div class="contact-grid grid lg:grid-cols-2 gap-16 items-start relative z-10 w-full">
+                
+                <!-- Left Info Side -->
+                <div class="contact-info">
+                    <p class="text-lightGray mb-10 text-lg leading-relaxed max-w-md mx-auto md:mx-0 text-center md:text-left">
+                        Whether you need a brand identity refresh, a custom website, or just want to say hi, feel free to drop a message. I'm always open to discussing new projects, creative ideas, or opportunities.
+                    </p>
+
+                    <div class="space-y-6 mb-12">
+                        <!-- Email -->
+                        <div class="flex items-center gap-5 p-4 rounded-2xl border border-white/5 bg-charcoal/50 hover:bg-charcoal transition-colors">
+                            <div class="w-14 h-14 bg-deepBlack rounded-xl flex items-center justify-center text-electricPurple text-xl shadow-inner border border-white/5 flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <h4 class="text-xs uppercase tracking-wider text-darkGray font-semibold mb-1">Email</h4>
+                                <a href="mailto:codexabdullah81@gmail.com" class="text-white hover:text-[#c678dd] transition-colors font-medium text-sm md:text-base break-all">codexabdullah81@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="flex items-center gap-5 p-4 rounded-2xl border border-white/5 bg-charcoal/50 hover:bg-charcoal transition-colors">
+                            <div class="w-14 h-14 bg-deepBlack rounded-xl flex items-center justify-center text-electricPurple text-xl shadow-inner border border-white/5 flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase tracking-wider text-darkGray font-semibold mb-1">Phone</h4>
+                                <a href="tel:01601477374" class="text-white hover:text-[#c678dd] transition-colors font-medium text-sm md:text-base">+88 01601477374</a>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-5 p-4 rounded-2xl border border-white/5 bg-charcoal/50 hover:bg-charcoal transition-colors">
+                            <div class="w-14 h-14 bg-deepBlack rounded-xl flex items-center justify-center text-electricPurple text-xl shadow-inner border border-white/5 flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase tracking-wider text-darkGray font-semibold mb-1">Based In</h4>
+                                <p class="text-white font-medium text-sm md:text-base">Barisal, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Feature: Local Time -->
+                     <div class="p-6 rounded-2xl border border-electricPurple/30 shadow-[0_0_20px_rgba(138,43,226,0.1)] inline-block bg-gradient-to-br from-charcoal to-deepBlack w-full md:w-auto text-center md:text-left">
+                        <h4 class="text-xs uppercase tracking-wider text-darkGray font-bold mb-3 flex items-center justify-center md:justify-start gap-2">
+                            <i class="fa-regular fa-clock text-electricPurple"></i> My Local Time (BD)
+                        </h4>
+                        <div class="text-3xl md:text-4xl font-mono text-white tracking-widest font-light" id="local-time">
+                            --:--:-- --
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Side (Site 2 FormSubmit integration) -->
+                <div class="contact-form bg-charcoal p-8 md:p-10 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden">
+                     <div class="absolute -bottom-20 -right-20 w-48 h-48 bg-electricPurple/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <form id="contact-form" action="https://formsubmit.co/codexabdullah81@gmail.com" method="POST" class="space-y-5 relative z-10 w-full">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New submission from Portfolio Contact Form">
+                        <input type="hidden" name="_next" value="https://gm-aby.github.io/GM.Abdullah_Brand-Designer/">
+                        
+                        <div>
+                            <label for="name" class="block text-xs uppercase tracking-wider font-semibold text-darkGray mb-2 ml-1">Name</label>
+                            <input type="text" name="name" id="name" class="w-full bg-deepBlack border border-white/5 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-electricPurple focus:ring-1 focus:ring-electricPurple transition-all shadow-inner hover:border-white/20" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-xs uppercase tracking-wider font-semibold text-darkGray mb-2 ml-1">Email</label>
+                            <input type="email" name="email" id="email" class="w-full bg-deepBlack border border-white/5 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-electricPurple focus:ring-1 focus:ring-electricPurple transition-all shadow-inner hover:border-white/20" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-darkGray mb-2 ml-1">Message</label>
+                            <textarea name="message" id="message" rows="5" class="w-full bg-deepBlack border border-white/5 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-electricPurple focus:ring-1 focus:ring-electricPurple transition-all resize-none shadow-inner hover:border-white/20" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-electricPurple to-[#c678dd] hover:from-electricPurpleHover hover:to-[#d08ce3] text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(138,43,226,0.3)] hover:shadow-[0_4px_25px_rgba(138,43,226,0.6)] flex items-center justify-center gap-2 mt-4 hover:-translate-y-1">
+                            Send Message <i class="fa-regular fa-paper-plane mt-0.5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deepBlack border-t border-white/5 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+                
+                <!-- Logo & Copyright -->
+                <div class="text-center md:text-left">
+                    <a href="#hero" class="text-xl font-bold tracking-tighter text-white block mb-2">
+                        G.M. <span class="gradient-text">Abdullah</span>
+                    </a>
+                    <p class="text-darkGray text-sm font-medium">&copy; <span id="currentYear">2026</span> G.M. Abdullah. Crafted with passion.</p>
+                </div>
+
+                <!-- Footer nav links (from site 1) -->
+                <div class="flex gap-6 text-sm font-medium">
+                    <a href="#about" class="text-darkGray hover:text-white transition-colors">About</a>
+                    <a href="#projects" class="text-darkGray hover:text-white transition-colors">Projects</a>
+                    <a href="#contact" class="text-darkGray hover:text-white transition-colors">Contact</a>
+                </div>
+
+                <!-- Social links (combined) -->
+                <div class="flex gap-3">
+                    <a href="https://www.linkedin.com/in/gm-abdullah" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-charcoal border border-white/5 hover:border-electricPurple hover:bg-electricPurple/10 text-lightGray hover:text-[#c678dd] rounded-full flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-1">
+                        <i class="fa-brands fa-linkedin-in text-base"></i>
+                    </a>
+                    <a href="https://www.behance.net/gmabdulla" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-charcoal border border-white/5 hover:border-electricPurple hover:bg-electricPurple/10 text-lightGray hover:text-[#c678dd] rounded-full flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-1">
+                        <i class="fa-brands fa-behance text-base"></i>
+                    </a>
+                    <!-- Assuming generic icons for Fiverr/others -->
+                    <a href="https://www.fiverr.com/sellers/codex_aby" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-charcoal border border-white/5 hover:border-electricPurple hover:bg-electricPurple/10 text-lightGray hover:text-[#c678dd] rounded-full flex items-center justify-center transition-all duration-300 shadow-sm hover:-translate-y-1 text-xs font-bold font-serif italic">
+                        fi
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- GSAP CDN - All required plugins -->
+    <!-- Back to Top Button (Site 2 functionality) -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-tr from-electricPurple to-[#c678dd] text-white rounded-full shadow-[0_4px_20px_rgba(138,43,226,0.6)] flex items-center justify-center text-lg transition-all duration-500 opacity-0 translate-y-8 pointer-events-none z-50 hover:shadow-[0_6px_25px_rgba(138,43,226,0.8)] hover:-translate-y-1">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- GSAP Plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <!-- Custom Scripts -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
