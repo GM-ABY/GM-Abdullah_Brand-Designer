@@ -90,6 +90,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Hide default cursor on desktop for custom cursor */
+@media (min-width: 769px) {
+  body {
+    cursor: none;
+  }
+}
+
 /* Gradient Text Unify (from Site 1) */
 .gradient-text {
   background: linear-gradient(135deg, var(--color-gradient-1), var(--color-gradient-2));
